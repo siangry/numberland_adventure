@@ -1,0 +1,45 @@
+{
+    "welcomeToNumberland":"欢迎来到数字乐园，一个数字生活和游戏的神奇世界！",
+    "butOhNo":"哦，不！数字国王需要你的帮助！",
+    "theMischievousGlobin":"调皮的混淆妖精把所有数字都弄乱了，现在一切都乱套了。",
+    "canYouHelpToRestore":"您能帮助恢复数字王国的平衡吗？",
+    "theMagicBridge":"魔法桥梁",
+    "theTowerOfNumbers":"数字之塔",
+    "theMagicalPotion":"神奇药水",
+    "easy":"简单",
+    "medium": "中等",
+    "hard": "困难",
+    "congratulationYouSave":"祝贺你！你成功拯救了数字王国！",
+    "theNumberKingCastle":"数字国王的城堡在河对岸，但桥被施了魔法！",
+    "toCrossYouMustChoose": "要想过桥，你必须通过比较两个数字来选择正确的桥梁",
+    "pickTheBiggerorSmaller":"按照国王的要求，选择较大的数字或较小的数字，让桥出现！",
+    "whichNumberIsBigger": "哪一个数字更大？",
+    "whichNumberIsSmaller": "哪一个数字更小？",
+    "bingoYouAreCorrect":"噔噔！你答对了！",
+    "oopsYouAreWrong":"哎呀！你答错了！",
+    "congratulationYouHaveLifted":"恭喜你！你成功解除了咒语。",
+    "oopsYouHaventLifted":"哎呀！你没能解除咒语。",
+    "theMixUpGlobin":"混淆妖精把数字王国的数字塔弄乱了！",
+    "theOnlyWayToFix":"解决这个问题的唯一办法是按顺序或逆序排列数字方块。",
+    "arrangetheNumberBlocks":"排列数字积木，建造正确的塔楼，恢复数字王国的天际线！",
+    "arrangeNumbersInAscending":"按顺序（从小到大）排列数字",
+    "arrangeNumbersInDescending":"按逆序（从大到小）排列数字",
+    "congratulationYouHavehelp":"恭喜你！你成功建造了正确的数字塔。",
+    "oopsTheTowerIsNotBuilt":"哎呀！你没能建造正确的数字塔。",
+    "theNumberWizardNeeds":"数字魔法师需要你帮忙制作魔法药水！",
+    "toCompleteTheSpell":"要完成咒语，你必须将两个数字组合起来，以匹配正确的药水配方。",
+    "mixTheRightNumbers":"在巫师的大锅中混合正确的数字，制作出光明药水！",
+    "weNeedToMake": "你需要制作 {composeValue}！哪两种数字成分可以混合？",
+    "@weNeedToMake" :{
+        "composeValue": {
+            "value":{
+                "type": "int"
+            }
+        }
+    },
+    "congratulationYouHaveCreated":"恭喜你！你成功创造了光明药水。",
+    "oopsYouHaveCreated":"哎呀！你没能创造光明药水。",
+    "en":"EN",
+    "zh":"ZH",
+    "ms":"MS"
+}

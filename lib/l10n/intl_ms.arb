@@ -1,0 +1,45 @@
+{
+    "welcomeToNumberland":"Selamat datang ke Numberland, sebuah dunia ajaib angka hidup dan bermain!",
+    "butOhNo":"Oh! Raja Angka memerlukan bantuan anda!",
+    "theMischievousGlobin":"Goblin Pengacau yang nakal telah mengacak-acak semua angka, dan sekarang semuanya menjadi tidak beraturan.",
+    "canYouHelpToRestore":"Bolehkah anda membantu untuk memulihkan keharmonian Numberland?",
+    "theMagicBridge":"Jambatan Ajaib",
+    "theTowerOfNumbers":"Menara Nombor",
+    "theMagicalPotion":"Ramuan Ajaib",
+    "easy":"Mudah",
+    "medium": "Sederhana",
+    "hard": "Susah",
+    "congratulationYouSave":"Tahniah! Anda berjaya menyelamatkan Numberland!",
+    "theNumberKingCastle":"Istana Raja Angka berada di seberang sungai, tetapi jambatannya dipesona oleh Goblin Pengacau!",
+    "toCrossYouMustChoose": "Untuk menghilangkan sihir, anda harus memilih jambatan yang betul dengan membandingkan dua nombor",
+    "pickTheBiggerorSmaller":"Pilih nombor yang lebih besar atau nombor yang lebih kecil, menurut permintaan Raja Angka, untuk membuat jambatan muncul!",
+    "whichNumberIsBigger": "Nombor manakah yang lebih besar?",
+    "whichNumberIsSmaller": "Nombor manakah yang lebih kecil? ",
+    "bingoYouAreCorrect":"Bingo! Anda betul!",
+    "oopsYouAreWrong":"Aduh! Anda salah!",
+    "congratulationYouHaveLifted":"Tahniah! Anda telah berjaya menghilangkan sihir.",
+    "oopsYouHaventLifted":"Aduh! Anda telah gagal menghilangkan sihir.",
+    "theMixUpGlobin":"Goblin Pengacau telah mengacaukan Menara Nombor di Numberland!",
+    "theOnlyWayToFix":"Satu-satunya cara untuk membetulkannya adalah menyusun blok nombor dalam tertib menaik atau menurun.",
+    "arrangetheNumberBlocks":"Susun blok nombor untuk membina menara yang betul dan memulihkan latar langit Numberland!",
+    "arrangeNumbersInAscending":"Susun nombor dalam tertib menaik (kecil ke besar)",
+    "arrangeNumbersInDescending":"Susun nombor dalam tertib menurun (besar ke kecil)",
+    "congratulationYouHavehelp":"Tahniah! Anda telah berjaya membina Menara Nombor dengan betul.",
+    "oopsTheTowerIsNotBuilt":"Aduh! Menara Nombor tidak dibina dengan betul.",
+    "theNumberWizardNeeds":"Wizard Nombor memerlukan bantuan anda untuk membuat ramuan ajaib!",
+    "toCompleteTheSpell":"Untuk melengkapkan sihir, anda harus menggabungkan dua nombor menurut resipi ramuan yang betul",
+    "mixTheRightNumbers":"Campurkan nombor yang betul dalam kawah ahli sihir untuk mencipta ramuan bercahaya!",
+    "weNeedToMake": "Anda perlu membuat {composeValue}! Dua bahan nombor yang manakah boleh anda campurkan?",
+    "@weNeedToMake" :{
+        "composeValue": {
+            "value":{
+                "type": "int"
+            }
+        }
+    },
+    "congratulationYouHaveCreated":"Tahniah! Anda telah berjaya mencipta ramuan bercahaya.",
+    "oopsYouHaveCreated":"Aduh! Sebaliknya kamu telah mencipta ramuan yang mematikan.",
+    "en":"EN",
+    "zh":"ZH",
+    "ms":"MS"
+}

@@ -1,0 +1,45 @@
+{
+    "welcomeToNumberland":"Welcome to Numberland, a magical world where numbers live and play!",
+    "butOhNo":"But oh no! The Number King needs your help!",
+    "theMischievousGlobin":"The mischievous Mix-Up Goblin has scrambled all the numbers, and now everything is out of order.",
+    "canYouHelpToRestore":"Can you help to restore the balance of Numberland?",
+    "theMagicBridge":"The Magic Bridge",
+    "theTowerOfNumbers":"The Tower of Numbers",
+    "theMagicalPotion":"The Magical Potion",
+    "easy":"Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "congratulationYouSave":"Congratulation! You save the Numberland!",
+    "theNumberKingCastle":"The Number King's castle is across a river, but the bridges are enchanted!",
+    "toCrossYouMustChoose": "To cross, you must choose the right bridge by comparing two number signs",
+    "pickTheBiggerorSmaller":"Pick the bigger number or smaller number, as the king requests, to make the bridge appear!",
+    "whichNumberIsBigger": "Which number is bigger? ",
+    "whichNumberIsSmaller": "Which number is smaller? ",
+    "bingoYouAreCorrect":"Bingo! You are correct!",
+    "oopsYouAreWrong":"Oops! You are wrong!",
+    "congratulationYouHaveLifted":"Congratulation! You have lifted the spell.",
+    "oopsYouHaventLifted":"Oops! you haven't lifted the spell.",
+    "theMixUpGlobin":"The Mix-Up Goblin has jumbled the Number Towers in Numberland!",
+    "theOnlyWayToFix":"The only way to fix them is by arranging the number blocks in ascending or descending order.",
+    "arrangetheNumberBlocks":"Arrange the number blocks to build the correct tower and restore Numberland's skyline!",
+    "arrangeNumbersInAscending":"Arrange numbers in ascending order (small to big)",
+    "arrangeNumbersInDescending":"Arrange numbers in descending order (big to small)",
+    "congratulationYouHavehelp":"Congratulation! You have successfully built the correct tower.",
+    "oopsTheTowerIsNotBuilt":"Oops! The tower is not built correctly.",
+    "theNumberWizardNeeds":"The Number Wizard needs your help to make magic potions!",
+    "toCompleteTheSpell":"To complete the spell, you must combine two numbers to match the correct potion recipe.",
+    "mixTheRightNumbers":"Mix the right numbers in the wizard's cauldron to create a glowing potion!",
+    "weNeedToMake": "We need to make {composeValue}! Which two number ingredients can we mix?",
+    "@weNeedToMake" :{
+        "composeValue": {
+            "value":{
+                "type": "int"
+            }
+        }
+    },
+    "congratulationYouHaveCreated":"Congratulation! You have created a glowing potion.",
+    "oopsYouHaveCreated":"Oops! You have created a deadly potion instead.",
+    "en":"EN",
+    "zh":"ZH",
+    "ms":"MS"
+}
