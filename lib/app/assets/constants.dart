@@ -8,6 +8,7 @@ class GeneralConstant {
 class ColorConstant {
   static const red = Color(0xFFE50012);
   static const green = Color(0xFF15BC11);
+  static const pastelGreen = Color(0xFFABF2A1);
   static const pink = Color(0xFFE195AB);
   static const yellow = Color(0xFFFFF574);
   static const blue = Color(0xFFA1D6CB);

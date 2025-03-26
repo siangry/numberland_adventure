@@ -1,6 +1,6 @@
 import 'package:numberland_adventure/app/exporter/importer_app_general.dart';
-import 'package:numberland_adventure/app/view/mainScreen/select_level_page.dart';
-import 'package:numberland_adventure/app/widget/touch_opacity.dart';
+import 'package:numberland_adventure/app/exporter/importer_app_screen.dart';
+
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
