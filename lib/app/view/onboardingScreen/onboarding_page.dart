@@ -58,10 +58,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     //buildLanguageSelector(),
-                    CustomTextBox(
-                        text: curPage.title,
-                        onNext: navigateToNext,
-                        isBottom: false),
+                    CustomTextBox(text: curPage.title, onNext: navigateToNext),
                   ],
                 ),
               ),
@@ -70,11 +67,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
     );
   }
 
-  // Widget buildLanguageSelector() {
-  //   return Positioned(
-  //     top: 40,
-  //     right: 20,
-  //     child: LanguageSelector(onLanguageChanged: changeLanguage),
-  //   );
-  // }
+// Widget buildLanguageSelector() {
+//   return Positioned(
+//     top: 40,
+//     right: 20,
+//     child: LanguageSelector(onLanguageChanged: changeLanguage),
+//   );
+// }
 }
