@@ -1,14 +1,14 @@
 import 'package:numberland_adventure/app/exporter/importer_app_general.dart';
 
 enum OnboardingEnums {
-  welcomepage,
+  welcomePage,
   needHelpPage,
   goblinPage,
   helpToRestorePage;
 
   String get title {
     switch (this) {
-      case OnboardingEnums.welcomepage:
+      case OnboardingEnums.welcomePage:
         return S.current.welcomeToNumberland;
       case OnboardingEnums.needHelpPage:
         return S.current.butOhNo;
@@ -21,7 +21,7 @@ enum OnboardingEnums {
 
   String get imagePath {
     switch (this) {
-      case OnboardingEnums.welcomepage:
+      case OnboardingEnums.welcomePage:
         return Assets.images.bgOnboarding1.path;
       case OnboardingEnums.needHelpPage:
         return Assets.images.bgOnboarding2.path;
