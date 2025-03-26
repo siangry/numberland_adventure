@@ -9,6 +9,19 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsAudioGen {
+  const $AssetsAudioGen();
+
+  /// File path: assets/audio/correct_sound_effect.mp3
+  String get correctSoundEffect => 'assets/audio/correct_sound_effect.mp3';
+
+  /// File path: assets/audio/wrong_sound_effect.mp3
+  String get wrongSoundEffect => 'assets/audio/wrong_sound_effect.mp3';
+
+  /// List of all assets
+  List<String> get values => [correctSoundEffect, wrongSoundEffect];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -133,6 +146,7 @@ class $AssetsImagesGen {
 class Assets {
   const Assets._();
 
+  static const $AssetsAudioGen audio = $AssetsAudioGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
