@@ -7,3 +7,4 @@ export 'package:numberland_adventure/app/view/orderingNumberScreen/order_number_
 export 'package:numberland_adventure/app/view/compareNumberScreen/compare_number_game_page.dart';
 export 'package:numberland_adventure/app/view/orderingNumberScreen/order_number_game_page.dart';
 export 'package:numberland_adventure/app/view/composingNumberScreen/compose_number_game_page.dart';
+export 'package:numberland_adventure/app/view/compareNumberScreen/compare_number_result_page.dart';
