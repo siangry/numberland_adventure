@@ -8,6 +8,7 @@ export 'package:numberland_adventure/app/assets/onboarding_enums.dart';
 export 'package:numberland_adventure/app/assets/menu_enums.dart';
 export 'package:numberland_adventure/app/assets/level_enums.dart';
 export 'package:numberland_adventure/app/assets/compare_intro_enums.dart';
+export 'package:numberland_adventure/app/assets/order_intro_enums.dart';
 
 export 'package:numberland_adventure/app/widget/custom_text_box.dart';
 export 'package:numberland_adventure/app/widget/language_selector.dart';
