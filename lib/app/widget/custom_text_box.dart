@@ -5,15 +5,9 @@ class CustomTextBox extends StatelessWidget {
   final String text;
   final Widget? nextPagePath;
   final VoidCallback? onNext;
-  final bool isBottom;
 
-  const CustomTextBox({
-    super.key,
-    required this.text,
-    this.nextPagePath,
-    this.onNext,
-    this.isBottom = true,
-  });
+  const CustomTextBox(
+      {super.key, required this.text, this.nextPagePath, this.onNext});
 
   @override
   Widget build(BuildContext context) {
