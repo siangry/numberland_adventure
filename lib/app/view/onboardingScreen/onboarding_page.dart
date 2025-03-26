@@ -19,7 +19,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
         curve: Curves.easeInOut,
       );
     } else {
-      debugPrint('naviaget to main');
       Navigator.of(context).push(
         MaterialPageRoute(builder: (context) => const MainPage()),
       );
