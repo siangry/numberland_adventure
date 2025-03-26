@@ -1,6 +1,5 @@
 import 'package:numberland_adventure/app/exporter/importer_app_general.dart';
 import 'package:numberland_adventure/app/exporter/importer_app_screen.dart';
-import 'package:numberland_adventure/app/widget/language_selector.dart';
 
 class OnboardingPage extends StatefulWidget {
   const OnboardingPage({super.key});
@@ -20,13 +19,14 @@ class _OnboardingPageState extends State<OnboardingPage> {
         curve: Curves.easeInOut,
       );
     } else {
+      debugPrint('naviaget to main');
       Navigator.of(context).push(
         MaterialPageRoute(builder: (context) => const MainPage()),
       );
     }
   }
 
-   void changeLanguage(Locale locale) {
+  void changeLanguage(Locale locale) {
     setState(() {
       ///todo: implement language change
     });
@@ -36,6 +36,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView.builder(
+          controller: _controller,
           itemCount: OnboardingEnums.values.length,
           onPageChanged: (index) {
             setState(() {
@@ -44,7 +45,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           },
           itemBuilder: (context, index) {
             final curPage = OnboardingEnums.values[index];
-      
+
             return Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -55,14 +56,13 @@ class _OnboardingPageState extends State<OnboardingPage> {
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     //buildLanguageSelector(),
-                    TextBox(
-                      text:curPage.title,
-                      nextPagePath: const OnboardingPage(),
-                    ),
-                    
+                    CustomTextBox(
+                        text: curPage.title,
+                        onNext: navigateToNext,
+                        isBottom: false),
                   ],
                 ),
               ),
@@ -71,11 +71,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
     );
   }
 
-  Widget buildLanguageSelector(){
-    return Positioned(
-            top: 40,
-            right: 20,
-            child: LanguageSelector(onLanguageChanged: changeLanguage),
-          );
-  }
+  // Widget buildLanguageSelector() {
+  //   return Positioned(
+  //     top: 40,
+  //     right: 20,
+  //     child: LanguageSelector(onLanguageChanged: changeLanguage),
+  //   );
+  // }
 }

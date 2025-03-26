@@ -13,21 +13,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Numberland Adventure',
       supportedLocales: [
-        Locale('en', ''), 
-        Locale('zh', ''), 
+        Locale('en', ''),
+        Locale('zh', ''),
         Locale('ms', ''),
       ],
       localizationsDelegates: [
+        S.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
       locale: Locale('en'),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
-        useMaterial3: true,
-        fontFamily: GeneralConstant.fontAcme
-      ),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+          useMaterial3: true,
+          fontFamily: GeneralConstant.fontAcme),
       home: const OnboardingPage(),
     );
   }
