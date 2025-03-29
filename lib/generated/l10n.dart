@@ -230,10 +230,10 @@ class S {
     );
   }
 
-  /// `Oops! you haven't lifted the spell.`
+  /// `Oops! you fail to lift the spell.`
   String get oopsYouHaventLifted {
     return Intl.message(
-      'Oops! you haven\'t lifted the spell.',
+      'Oops! you fail to lift the spell.',
       name: 'oopsYouHaventLifted',
       desc: '',
       args: [],

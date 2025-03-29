@@ -73,7 +73,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Oops! You have created a deadly potion instead.",
     ),
     "oopsYouHaventLifted": MessageLookupByLibrary.simpleMessage(
-      "Oops! you haven\'t lifted the spell.",
+      "Oops! you fail to lift the spell.",
     ),
     "pickTheBiggerorSmaller": MessageLookupByLibrary.simpleMessage(
       "Pick the bigger number or smaller number, as the king requests, to make the bridge appear!",
