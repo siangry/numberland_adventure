@@ -17,9 +17,10 @@ class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
   int score = 0;
   int num1 = 0, num2 = 0;
   bool isBiggerQuestion = true;
+  bool isTextVisible = false;
   int? correctAns;
   String? questionText;
-  String? resultText;
+  String resultText = '';
   Color? resultTextColor;
 
   @override
@@ -29,24 +30,40 @@ class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
   }
 
   void generateQuestion() {
+    setState(() {
+      isTextVisible = false;
+    });
+
     int maxNumber = widget.levelId == 0
         ? 9
         : widget.levelId == 1
             ? 99
             : 999;
+
     num1 = random.nextInt(maxNumber + 1);
-    num2 = random.nextInt(maxNumber + 1);
+    do {
+      num2 = random.nextInt(maxNumber + 1);
+    } while (num2 == num1);
+
     isBiggerQuestion = random.nextBool();
     questionText = isBiggerQuestion
         ? S.current.whichNumberIsBigger
         : S.current.whichNumberIsSmaller;
+    correctAns = null;
   }
 
   void checkAnswer(int selected) {
     bool isCorrect = (isBiggerQuestion && selected == max(num1, num2)) ||
         (!isBiggerQuestion && selected == min(num1, num2));
 
+    if (isBiggerQuestion) {
+      correctAns = max(num1, num2);
+    } else {
+      correctAns = min(num1, num2);
+    }
+
     setState(() {
+      isTextVisible = true;
       resultText =
           isCorrect ? S.current.bingoYouAreCorrect : S.current.oopsYouAreWrong;
       resultTextColor = isCorrect ? ColorConstant.green : ColorConstant.red;
@@ -63,26 +80,22 @@ class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
       Future.delayed(const Duration(seconds: 5), () {
         setState(() {
           gameCount++;
-          resultText = '';
           generateQuestion();
         });
       });
     } else {
-      Future.delayed(const Duration(seconds: 5), () => showGameResult(score));
+      Future.delayed(
+          const Duration(seconds: 5),
+          () => Navigator.of(context).push(
+                MaterialPageRoute(
+                    builder: (context) =>
+                        CompareNumberResultPage(score: score)),
+              ));
     }
   }
 
   void playSound(String fileName) async {
     await audioPlayer.play(AssetSource(fileName));
-  }
-
-  void showGameResult(int score) {
-    if (score >= 8) {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-            builder: (context) => CompareNumberResultPage(score: score)),
-      );
-    }
   }
 
   @override
@@ -125,11 +138,12 @@ class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
                   ),
                 ],
               ),
-              if (resultText != null)
-                Text(
-                  resultText ?? '',
-                  style: TextStyle(fontSize: 20, color: resultTextColor),
-                )
+              Visibility(
+                  visible: isTextVisible,
+                  child: Text(
+                    resultText,
+                    style: TextStyle(color: resultTextColor, fontSize: 24),
+                  ))
             ],
           ),
         ),
@@ -138,19 +152,29 @@ class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
   }
 
   Widget buildNumberCard(int num) {
-    return TouchableOpacity(
-      child: Container(
-          height: MediaQuery.sizeOf(context).height * 0.1,
-          decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(color: Colors.black38, offset: Offset(6, 6))
-              ],
-              borderRadius: BorderRadius.circular(20)),
-          child: Center(
-              child: Text(num.toString(),
-                  style: TextStyle(color: ColorConstant.black, fontSize: 24)))),
-      onPressed: () => checkAnswer(num),
-    );
+    return Stack(clipBehavior: Clip.none, children: [
+      TouchableOpacity(
+        child: Container(
+            height: MediaQuery.sizeOf(context).height * 0.16,
+            decoration: BoxDecoration(
+                color: getRandomColor(),
+                boxShadow: [
+                  BoxShadow(color: Colors.black38, offset: Offset(6, 6))
+                ],
+                borderRadius: BorderRadius.circular(20)),
+            child: Center(
+                child: Text(num.toString(),
+                    style:
+                        TextStyle(color: ColorConstant.black, fontSize: 24)))),
+        onPressed: () => checkAnswer(num),
+      ),
+      if (isTextVisible)
+        Positioned(
+            top: -30,
+            left: 10,
+            child: num == correctAns
+                ? Image.asset(Assets.images.icCorrect.path)
+                : Image.asset(Assets.images.icWrong.path))
+    ]);
   }
 }

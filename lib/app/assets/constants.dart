@@ -11,10 +11,21 @@ class ColorConstant {
   static const pastelGreen = Color(0xFFABF2A1);
   static const pink = Color(0xFFE195AB);
   static const yellow = Color(0xFFFFF574);
-  static const blue = Color(0xFFA1D6CB);
+  static const blue = Color(0xFF6AC5FE);
   static const purple = Color(0xFFA19AD3);
   static const white = Color(0xFFFFFFFF);
   static const black = Color(0xFF000000);
+}
+
+Color getRandomColor() {
+  List<Color> colorList = [
+    ColorConstant.pastelGreen,
+    ColorConstant.pink,
+    ColorConstant.yellow,
+    ColorConstant.blue,
+    ColorConstant.purple,
+  ];
+  return colorList[Random().nextInt(colorList.length)];
 }
 
 class LocaleConstant {

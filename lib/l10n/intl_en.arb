@@ -18,7 +18,7 @@
     "bingoYouAreCorrect":"Bingo! You are correct!",
     "oopsYouAreWrong":"Oops! You are wrong!",
     "congratulationYouHaveLifted":"Congratulation! You have lifted the spell.",
-    "oopsYouHaventLifted":"Oops! you haven't lifted the spell.",
+    "oopsYouHaventLifted":"Oops! you fail to lift the spell.",
     "theMixUpGlobin":"The Mix-Up Goblin has jumbled the Number Towers in Numberland!",
     "theOnlyWayToFix":"The only way to fix them is by arranging the number blocks in ascending or descending order.",
     "arrangetheNumberBlocks":"Arrange the number blocks to build the correct tower and restore Numberland's skyline!",
