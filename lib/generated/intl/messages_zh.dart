@@ -20,7 +20,10 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'zh';
 
-  static String m0(composeValue) => "你需要制作 ${composeValue}！哪两种数字成分可以混合？";
+  static String m0(answer) => "正确答案是${answer}";
+
+  static String m1(composeValue) =>
+      "你需要制作 ${composeValue}！混合两种数字成分所获得的数字成品是多少？";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -67,6 +70,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pickTheBiggerorSmaller": MessageLookupByLibrary.simpleMessage(
       "按照国王的要求，选择较大的数字或较小的数字，让桥出现！",
     ),
+    "theCorrectNumberIs": m0,
     "theMagicBridge": MessageLookupByLibrary.simpleMessage("魔法桥梁"),
     "theMagicalPotion": MessageLookupByLibrary.simpleMessage("神奇药水"),
     "theMischievousGlobin": MessageLookupByLibrary.simpleMessage(
@@ -89,7 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "toCrossYouMustChoose": MessageLookupByLibrary.simpleMessage(
       "要想过桥，你必须通过比较两个数字来选择正确的桥梁",
     ),
-    "weNeedToMake": m0,
+    "weNeedToMake": m1,
     "welcomeToNumberland": MessageLookupByLibrary.simpleMessage(
       "欢迎来到数字乐园，一个数字生活和游戏的神奇世界！",
     ),

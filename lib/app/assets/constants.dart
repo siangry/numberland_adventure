@@ -3,6 +3,9 @@ import 'package:numberland_adventure/app/exporter/importer_app_general.dart';
 class GeneralConstant {
   static const String fontAcme = 'Acme';
   static const int gameCount = 10;
+  static const plus = '+';
+  static const minus = '-';
+  static const equal = '=';
 }
 
 class ColorConstant {

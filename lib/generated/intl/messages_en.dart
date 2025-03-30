@@ -20,8 +20,10 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(composeValue) =>
-      "We need to make ${composeValue}! Which two number ingredients can we mix?";
+  static String m0(answer) => "The correct answer is ${answer}";
+
+  static String m1(composeValue) =>
+      "We need to make ${composeValue}! What is the number product of mixing two number ingredients?";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -78,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pickTheBiggerorSmaller": MessageLookupByLibrary.simpleMessage(
       "Pick the bigger number or smaller number, as the king requests, to make the bridge appear!",
     ),
+    "theCorrectNumberIs": m0,
     "theMagicBridge": MessageLookupByLibrary.simpleMessage("The Magic Bridge"),
     "theMagicalPotion": MessageLookupByLibrary.simpleMessage(
       "The Magical Potion",
@@ -106,7 +109,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "toCrossYouMustChoose": MessageLookupByLibrary.simpleMessage(
       "To cross, you must choose the right bridge by comparing two number signs",
     ),
-    "weNeedToMake": m0,
+    "weNeedToMake": m1,
     "welcomeToNumberland": MessageLookupByLibrary.simpleMessage(
       "Welcome to Numberland, a magical world where numbers live and play!",
     ),

@@ -31,7 +31,7 @@ enum GameResultEnums {
       case GameResultEnums.win:
         return Assets.images.bgComposeNumWin.path;
       case GameResultEnums.lose:
-        return Assets.images.bgComposeNumWin.path;
+        return Assets.images.bgComposeNumLose.path;
     }
   }
 
