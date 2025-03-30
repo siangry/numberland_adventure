@@ -1,17 +1,17 @@
 import 'package:numberland_adventure/app/exporter/importer_app_general.dart';
 import 'package:numberland_adventure/app/exporter/importer_app_screen.dart';
 
-class CompareNumberResultPage extends StatefulWidget {
+class ComposeNumberResultPage extends StatefulWidget {
   final int score;
 
-  const CompareNumberResultPage({super.key, required this.score});
+  const ComposeNumberResultPage({super.key, required this.score});
 
   @override
-  State<CompareNumberResultPage> createState() =>
-      _CompareNumberResultPageState();
+  State<ComposeNumberResultPage> createState() =>
+      _ComposeNumberResultPageState();
 }
 
-class _CompareNumberResultPageState extends State<CompareNumberResultPage> {
+class _ComposeNumberResultPageState extends State<ComposeNumberResultPage> {
   int? resultId;
 
   void getResult() {
@@ -41,12 +41,12 @@ class _CompareNumberResultPageState extends State<CompareNumberResultPage> {
         decoration: BoxDecoration(
           image: resultId == 0
               ? DecorationImage(
-                  image: Image.asset(GameResultEnums.win.compareBackgroundPath)
+                  image: Image.asset(GameResultEnums.win.composeBackgroundPath)
                       .image,
                   fit: BoxFit.cover,
                 )
               : DecorationImage(
-                  image: Image.asset(GameResultEnums.lose.compareBackgroundPath)
+                  image: Image.asset(GameResultEnums.lose.composeBackgroundPath)
                       .image,
                   fit: BoxFit.cover,
                 ),
@@ -58,7 +58,7 @@ class _CompareNumberResultPageState extends State<CompareNumberResultPage> {
             children: [
               CustomTextBox(
                   text:
-                      ('Score: $finalScore/15\n${resultId == 0 ? GameResultEnums.win.compareText : GameResultEnums.lose.compareText}'),
+                      ('Score: $finalScore/15\n${resultId == 0 ? GameResultEnums.win.composeText : GameResultEnums.lose.composeText}'),
                   onNext: () => Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => MainPage()))),
             ],
