@@ -20,8 +20,10 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ms';
 
-  static String m0(composeValue) =>
-      "Anda perlu membuat ${composeValue}! Dua bahan nombor yang manakah boleh anda campurkan?";
+  static String m0(answer) => "Jawapan yang betul ialah ${answer}";
+
+  static String m1(composeValue) =>
+      "Anda perlu membuat ${composeValue}! Apakah hasil nombor yang didapat daripada campuran dua bahan nombor?";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -78,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pickTheBiggerorSmaller": MessageLookupByLibrary.simpleMessage(
       "Pilih nombor yang lebih besar atau nombor yang lebih kecil, menurut permintaan Raja Angka, untuk membuat jambatan muncul!",
     ),
+    "theCorrectNumberIs": m0,
     "theMagicBridge": MessageLookupByLibrary.simpleMessage("Jambatan Ajaib"),
     "theMagicalPotion": MessageLookupByLibrary.simpleMessage("Ramuan Ajaib"),
     "theMischievousGlobin": MessageLookupByLibrary.simpleMessage(
@@ -102,7 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "toCrossYouMustChoose": MessageLookupByLibrary.simpleMessage(
       "Untuk menghilangkan sihir, anda harus memilih jambatan yang betul dengan membandingkan dua nombor",
     ),
-    "weNeedToMake": m0,
+    "weNeedToMake": m1,
     "welcomeToNumberland": MessageLookupByLibrary.simpleMessage(
       "Selamat datang ke Numberland, sebuah dunia ajaib angka hidup dan bermain!",
     ),

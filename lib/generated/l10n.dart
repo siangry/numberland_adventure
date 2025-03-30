@@ -340,10 +340,10 @@ class S {
     );
   }
 
-  /// `We need to make {composeValue}! Which two number ingredients can we mix?`
+  /// `We need to make {composeValue}! What is the number product of mixing two number ingredients?`
   String weNeedToMake(Object composeValue) {
     return Intl.message(
-      'We need to make $composeValue! Which two number ingredients can we mix?',
+      'We need to make $composeValue! What is the number product of mixing two number ingredients?',
       name: 'weNeedToMake',
       desc: '',
       args: [composeValue],
@@ -367,6 +367,16 @@ class S {
       name: 'oopsYouHaveCreated',
       desc: '',
       args: [],
+    );
+  }
+
+  /// `The correct answer is {answer}`
+  String theCorrectNumberIs(Object answer) {
+    return Intl.message(
+      'The correct answer is $answer',
+      name: 'theCorrectNumberIs',
+      desc: '',
+      args: [answer],
     );
   }
 

@@ -29,7 +29,7 @@
     "theNumberWizardNeeds":"数字魔法师需要你帮忙制作魔法药水！",
     "toCompleteTheSpell":"要完成咒语，你必须将两个数字组合起来，以匹配正确的药水配方。",
     "mixTheRightNumbers":"在巫师的大锅中混合正确的数字，制作出光明药水！",
-    "weNeedToMake": "你需要制作 {composeValue}！哪两种数字成分可以混合？",
+    "weNeedToMake": "你需要制作 {composeValue}！混合两种数字成分所获得的数字成品是多少？",
     "@weNeedToMake" :{
         "composeValue": {
             "value":{
@@ -39,6 +39,14 @@
     },
     "congratulationYouHaveCreated":"恭喜你！你成功创造了光明药水。",
     "oopsYouHaveCreated":"哎呀！你没能创造光明药水。",
+    "theCorrectNumberIs": "正确答案是{answer}",
+    "@theCorrectNumberIs" :{
+        "answer": {
+            "value":{
+                "type": "int"
+            }
+        }
+    },
     "en":"EN",
     "zh":"ZH",
     "ms":"MS"

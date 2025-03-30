@@ -29,7 +29,7 @@
     "theNumberWizardNeeds":"Wizard Nombor memerlukan bantuan anda untuk membuat ramuan ajaib!",
     "toCompleteTheSpell":"Untuk melengkapkan sihir, anda harus menggabungkan dua nombor menurut resipi ramuan yang betul",
     "mixTheRightNumbers":"Campurkan nombor yang betul dalam kawah ahli sihir untuk mencipta ramuan bercahaya!",
-    "weNeedToMake": "Anda perlu membuat {composeValue}! Dua bahan nombor yang manakah boleh anda campurkan?",
+    "weNeedToMake": "Anda perlu membuat {composeValue}! Apakah hasil nombor yang didapat daripada campuran dua bahan nombor?",
     "@weNeedToMake" :{
         "composeValue": {
             "value":{
@@ -39,6 +39,14 @@
     },
     "congratulationYouHaveCreated":"Tahniah! Anda telah berjaya mencipta ramuan bercahaya.",
     "oopsYouHaveCreated":"Aduh! Sebaliknya kamu telah mencipta ramuan yang mematikan.",
+    "theCorrectNumberIs": "Jawapan yang betul ialah {answer}",
+    "@theCorrectNumberIs" :{
+        "answer": {
+            "value":{
+                "type": "int"
+            }
+        }
+    },
     "en":"EN",
     "zh":"ZH",
     "ms":"MS"
