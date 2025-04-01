@@ -45,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "canYouHelpToRestore": MessageLookupByLibrary.simpleMessage(
       "Bolehkah anda membantu untuk memulihkan keharmonian Numberland?",
     ),
+    "chinese": MessageLookupByLibrary.simpleMessage("Cina"),
     "congratulationYouHaveCreated": MessageLookupByLibrary.simpleMessage(
       "Tahniah! Anda telah berjaya mencipta ramuan bercahaya.",
     ),
@@ -58,13 +59,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Tahniah! Anda berjaya menyelamatkan Numberland!",
     ),
     "easy": MessageLookupByLibrary.simpleMessage("Mudah"),
-    "en": MessageLookupByLibrary.simpleMessage("EN"),
+    "en": MessageLookupByLibrary.simpleMessage("en"),
+    "english": MessageLookupByLibrary.simpleMessage("Inggeris"),
     "hard": MessageLookupByLibrary.simpleMessage("Susah"),
+    "language": MessageLookupByLibrary.simpleMessage("Bahasa"),
+    "malay": MessageLookupByLibrary.simpleMessage("Melayu"),
     "medium": MessageLookupByLibrary.simpleMessage("Sederhana"),
     "mixTheRightNumbers": MessageLookupByLibrary.simpleMessage(
       "Campurkan nombor yang betul dalam kawah ahli sihir untuk mencipta ramuan bercahaya!",
     ),
-    "ms": MessageLookupByLibrary.simpleMessage("MS"),
+    "ms": MessageLookupByLibrary.simpleMessage("ms"),
+    "music": MessageLookupByLibrary.simpleMessage("Lagu"),
     "oopsTheTowerIsNotBuilt": MessageLookupByLibrary.simpleMessage(
       "Aduh! Menara Nombor tidak dibina dengan betul.",
     ),
@@ -80,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pickTheBiggerorSmaller": MessageLookupByLibrary.simpleMessage(
       "Pilih nombor yang lebih besar atau nombor yang lebih kecil, menurut permintaan Raja Angka, untuk membuat jambatan muncul!",
     ),
+    "settings": MessageLookupByLibrary.simpleMessage("Pengaturan"),
     "theCorrectNumberIs": m0,
     "theMagicBridge": MessageLookupByLibrary.simpleMessage("Jambatan Ajaib"),
     "theMagicalPotion": MessageLookupByLibrary.simpleMessage("Ramuan Ajaib"),
@@ -115,6 +121,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "whichNumberIsSmaller": MessageLookupByLibrary.simpleMessage(
       "Nombor manakah yang lebih kecil? ",
     ),
-    "zh": MessageLookupByLibrary.simpleMessage("ZH"),
+    "zh": MessageLookupByLibrary.simpleMessage("zh"),
   };
 }

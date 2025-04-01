@@ -75,9 +75,9 @@ class _OrderNumberGamePageState extends State<OrderNumberGamePage> {
       if (!isCorrect) isWrong = true;
     });
 
-    // await audioPlayer.play(AssetSource(isCorrect
-    //     ? GameResultEnums.win.audioPath
-    //     : GameResultEnums.lose.audioPath));
+    if (isCorrect) {
+      score++;
+    }
 
     if (gameCount < 14) {
       Future.delayed(const Duration(seconds: 5), () {
@@ -108,66 +108,72 @@ class _OrderNumberGamePageState extends State<OrderNumberGamePage> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                questionText,
-                style: TextStyle(color: ColorConstant.black, fontSize: 30),
-                textAlign: TextAlign.center,
-              ),
-              Wrap(
-                spacing: 10,
-                runSpacing: 8,
-                alignment: WrapAlignment.center,
-                children: List.generate(
-                    userOrder.length,
-                    (index) => SizedBox(
-                        width: MediaQuery.sizeOf(context).width * 0.24,
-                        child: buildInputBox(index))),
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Visibility(
-                      visible: isTextVisible,
-                      child: Text(
-                        resultText,
-                        style: TextStyle(color: resultTextColor, fontSize: 24),
-                      )),
-                  Visibility(
-                      visible: isWrong,
-                      child: Text(
-                        S.current.theCorrectNumberIs(correctOrder.join(", ")),
-                        style: TextStyle(color: resultTextColor, fontSize: 24),
-                        textAlign: TextAlign.center,
-                      )),
-                ],
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.black, width: 2),
+        child: SafeArea(
+          minimum: const EdgeInsets.all(16),
+          child: Stack(children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  questionText,
+                  style: TextStyle(color: ColorConstant.black, fontSize: 30),
+                  textAlign: TextAlign.center,
                 ),
-                child: Wrap(
+                Wrap(
+                  spacing: 10,
+                  runSpacing: 8,
                   alignment: WrapAlignment.center,
-                  children: numbers
-                      .map((number) => Draggable<int>(
-                            data: number,
-                            feedback: buildNumberCard(number, isDragging: true),
-                            childWhenDragging: Opacity(
-                                opacity: 0.5, child: buildNumberCard(number)),
-                            child: buildNumberCard(number),
-                          ))
-                      .toList(),
+                  children: List.generate(
+                      userOrder.length,
+                      (index) => SizedBox(
+                          width: MediaQuery.sizeOf(context).width * 0.24,
+                          child: buildInputBox(index))),
                 ),
-              )
-            ],
-          ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Visibility(
+                        visible: isTextVisible,
+                        child: Text(
+                          resultText,
+                          style:
+                              TextStyle(color: resultTextColor, fontSize: 24),
+                        )),
+                    Visibility(
+                        visible: isWrong,
+                        child: Text(
+                          S.current.theCorrectNumberIs(correctOrder.join(", ")),
+                          style:
+                              TextStyle(color: resultTextColor, fontSize: 24),
+                          textAlign: TextAlign.center,
+                        )),
+                  ],
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: Colors.black, width: 2),
+                  ),
+                  child: Wrap(
+                    alignment: WrapAlignment.center,
+                    children: numbers
+                        .map((number) => Draggable<int>(
+                              data: number,
+                              feedback:
+                                  buildNumberCard(number, isDragging: true),
+                              childWhenDragging: Opacity(
+                                  opacity: 0.5, child: buildNumberCard(number)),
+                              child: buildNumberCard(number),
+                            ))
+                        .toList(),
+                  ),
+                )
+              ],
+            ),
+            Positioned(top: 30, right: 16, child: FloatingButton())
+          ]),
         ),
       ),
     );

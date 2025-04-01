@@ -12,7 +12,6 @@ class ComposeNumberGamePage extends StatefulWidget {
 
 class _ComposeNumberGamePageState extends State<ComposeNumberGamePage> {
   final Random random = Random();
-  final AudioPlayer audioPlayer = AudioPlayer();
   int gameCount = 0;
   int score = 0;
   int num1 = 0, num2 = 0;
@@ -100,9 +99,6 @@ class _ComposeNumberGamePageState extends State<ComposeNumberGamePage> {
 
     if (isCorrect) {
       score++;
-      playSound(Assets.audio.correctSoundEffect);
-    } else {
-      playSound(Assets.audio.wrongSoundEffect);
     }
 
     if (gameCount < 14) {
@@ -124,10 +120,6 @@ class _ComposeNumberGamePageState extends State<ComposeNumberGamePage> {
     }
   }
 
-  void playSound(String fileName) async {
-    await audioPlayer.play(AssetSource(fileName));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -140,9 +132,10 @@ class _ComposeNumberGamePageState extends State<ComposeNumberGamePage> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
+        child: SafeArea(
+          minimum: const EdgeInsets.all(16),
+          child: Stack(children: [
+            Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -202,7 +195,10 @@ class _ComposeNumberGamePageState extends State<ComposeNumberGamePage> {
                 ),
                 buildNumberOption()
               ],
-            )),
+            ),
+            Positioned(top: 30, right: 16, child: FloatingButton())
+          ]),
+        ),
       ),
     );
   }

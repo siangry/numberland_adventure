@@ -33,31 +33,35 @@ class _SelectLevelPageState extends State<SelectLevelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-          width: MediaQuery.sizeOf(context).width,
-          height: MediaQuery.sizeOf(context).height,
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: Image.asset(Assets.images.bgHome.path).image,
-                fit: BoxFit.cover),
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ...LevelEnums.values.map((levelItem) {
-                  final int levelId = levelItem.id;
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: TouchableOpacity(
-                        child: buildLevelCard(levelItem.title, levelItem.color),
-                        onPressed: () => navigateToNext(levelId)),
-                  );
-                }),
-              ],
+      body: Stack(children: [
+        Container(
+            width: MediaQuery.sizeOf(context).width,
+            height: MediaQuery.sizeOf(context).height,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: Image.asset(Assets.images.bgHome.path).image,
+                  fit: BoxFit.cover),
             ),
-          )),
+            child: SafeArea(
+              minimum: const EdgeInsets.all(16),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ...LevelEnums.values.map((levelItem) {
+                    final int levelId = levelItem.id;
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      child: TouchableOpacity(
+                          child:
+                              buildLevelCard(levelItem.title, levelItem.color),
+                          onPressed: () => navigateToNext(levelId)),
+                    );
+                  }),
+                ],
+              ),
+            )),
+        Positioned(top: 30, right: 16, child: FloatingButton())
+      ]),
     );
   }
 

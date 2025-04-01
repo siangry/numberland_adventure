@@ -1,5 +1,4 @@
 import 'package:numberland_adventure/app/exporter/importer_app_general.dart';
-import 'package:numberland_adventure/app/widget/touch_opacity.dart';
 
 class CustomTextBox extends StatelessWidget {
   final String text;

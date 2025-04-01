@@ -61,13 +61,4 @@ enum GameResultEnums {
         return S.current.oopsYouHaveCreated;
     }
   }
-
-  String get audioPath {
-    switch (this) {
-      case GameResultEnums.win:
-        return Assets.audio.correctSoundEffect;
-      case GameResultEnums.lose:
-        return Assets.audio.wrongSoundEffect;
-    }
-  }
 }
