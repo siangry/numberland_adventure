@@ -45,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "canYouHelpToRestore": MessageLookupByLibrary.simpleMessage(
       "Can you help to restore the balance of Numberland?",
     ),
+    "chinese": MessageLookupByLibrary.simpleMessage("Chinese"),
     "congratulationYouHaveCreated": MessageLookupByLibrary.simpleMessage(
       "Congratulation! You have created a glowing potion.",
     ),
@@ -58,13 +59,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Congratulation! You save the Numberland!",
     ),
     "easy": MessageLookupByLibrary.simpleMessage("Easy"),
-    "en": MessageLookupByLibrary.simpleMessage("EN"),
+    "en": MessageLookupByLibrary.simpleMessage("en"),
+    "english": MessageLookupByLibrary.simpleMessage("English"),
     "hard": MessageLookupByLibrary.simpleMessage("Hard"),
+    "language": MessageLookupByLibrary.simpleMessage("Language"),
+    "malay": MessageLookupByLibrary.simpleMessage("Malay"),
     "medium": MessageLookupByLibrary.simpleMessage("Medium"),
     "mixTheRightNumbers": MessageLookupByLibrary.simpleMessage(
       "Mix the right numbers in the wizard\'s cauldron to create a glowing potion!",
     ),
-    "ms": MessageLookupByLibrary.simpleMessage("MS"),
+    "ms": MessageLookupByLibrary.simpleMessage("ms"),
+    "music": MessageLookupByLibrary.simpleMessage("Music"),
     "oopsTheTowerIsNotBuilt": MessageLookupByLibrary.simpleMessage(
       "Oops! The tower is not built correctly.",
     ),
@@ -80,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pickTheBiggerorSmaller": MessageLookupByLibrary.simpleMessage(
       "Pick the bigger number or smaller number, as the king requests, to make the bridge appear!",
     ),
+    "settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "theCorrectNumberIs": m0,
     "theMagicBridge": MessageLookupByLibrary.simpleMessage("The Magic Bridge"),
     "theMagicalPotion": MessageLookupByLibrary.simpleMessage(
@@ -119,6 +125,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "whichNumberIsSmaller": MessageLookupByLibrary.simpleMessage(
       "Which number is smaller? ",
     ),
-    "zh": MessageLookupByLibrary.simpleMessage("ZH"),
+    "zh": MessageLookupByLibrary.simpleMessage("zh"),
   };
 }

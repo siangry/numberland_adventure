@@ -51,16 +51,19 @@ class _CompareNumberMainPageState extends State<CompareNumberMainPage> {
                   fit: BoxFit.cover,
                 ),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    CustomTextBox(
-                        text: curPage.text,
-                        onNext: () => navigateToNext(levelId)),
-                  ],
-                ),
+              child: SafeArea(
+                minimum: const EdgeInsets.all(16),
+                child: Stack(children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      CustomTextBox(
+                          text: curPage.text,
+                          onNext: () => navigateToNext(levelId)),
+                    ],
+                  ),
+                  Positioned(top: 30, right: 16, child: FloatingButton())
+                ]),
               ),
             );
           }),

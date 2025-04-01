@@ -380,19 +380,49 @@ class S {
     );
   }
 
-  /// `EN`
+  /// `en`
   String get en {
-    return Intl.message('EN', name: 'en', desc: '', args: []);
+    return Intl.message('en', name: 'en', desc: '', args: []);
   }
 
-  /// `ZH`
+  /// `zh`
   String get zh {
-    return Intl.message('ZH', name: 'zh', desc: '', args: []);
+    return Intl.message('zh', name: 'zh', desc: '', args: []);
   }
 
-  /// `MS`
+  /// `ms`
   String get ms {
-    return Intl.message('MS', name: 'ms', desc: '', args: []);
+    return Intl.message('ms', name: 'ms', desc: '', args: []);
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message('Language', name: 'language', desc: '', args: []);
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message('English', name: 'english', desc: '', args: []);
+  }
+
+  /// `Chinese`
+  String get chinese {
+    return Intl.message('Chinese', name: 'chinese', desc: '', args: []);
+  }
+
+  /// `Malay`
+  String get malay {
+    return Intl.message('Malay', name: 'malay', desc: '', args: []);
+  }
+
+  /// `Settings`
+  String get settings {
+    return Intl.message('Settings', name: 'settings', desc: '', args: []);
+  }
+
+  /// `Music`
+  String get music {
+    return Intl.message('Music', name: 'music', desc: '', args: []);
   }
 }
 

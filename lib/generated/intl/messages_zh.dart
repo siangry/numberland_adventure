@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "canYouHelpToRestore": MessageLookupByLibrary.simpleMessage(
       "您能帮助恢复数字王国的平衡吗？",
     ),
+    "chinese": MessageLookupByLibrary.simpleMessage("华文"),
     "congratulationYouHaveCreated": MessageLookupByLibrary.simpleMessage(
       "恭喜你！你成功创造了光明药水。",
     ),
@@ -54,13 +55,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "祝贺你！你成功拯救了数字王国！",
     ),
     "easy": MessageLookupByLibrary.simpleMessage("简单"),
-    "en": MessageLookupByLibrary.simpleMessage("EN"),
+    "en": MessageLookupByLibrary.simpleMessage("en"),
+    "english": MessageLookupByLibrary.simpleMessage("英文"),
     "hard": MessageLookupByLibrary.simpleMessage("困难"),
+    "language": MessageLookupByLibrary.simpleMessage("语言"),
+    "malay": MessageLookupByLibrary.simpleMessage("马来文"),
     "medium": MessageLookupByLibrary.simpleMessage("中等"),
     "mixTheRightNumbers": MessageLookupByLibrary.simpleMessage(
       "在巫师的大锅中混合正确的数字，制作出光明药水！",
     ),
-    "ms": MessageLookupByLibrary.simpleMessage("MS"),
+    "ms": MessageLookupByLibrary.simpleMessage("ms"),
+    "music": MessageLookupByLibrary.simpleMessage("音乐"),
     "oopsTheTowerIsNotBuilt": MessageLookupByLibrary.simpleMessage(
       "哎呀！你没能建造正确的数字塔。",
     ),
@@ -70,6 +75,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pickTheBiggerorSmaller": MessageLookupByLibrary.simpleMessage(
       "按照国王的要求，选择较大的数字或较小的数字，让桥出现！",
     ),
+    "settings": MessageLookupByLibrary.simpleMessage("设定"),
     "theCorrectNumberIs": m0,
     "theMagicBridge": MessageLookupByLibrary.simpleMessage("魔法桥梁"),
     "theMagicalPotion": MessageLookupByLibrary.simpleMessage("神奇药水"),
@@ -99,6 +105,6 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "whichNumberIsBigger": MessageLookupByLibrary.simpleMessage("哪一个数字更大？"),
     "whichNumberIsSmaller": MessageLookupByLibrary.simpleMessage("哪一个数字更小？"),
-    "zh": MessageLookupByLibrary.simpleMessage("ZH"),
+    "zh": MessageLookupByLibrary.simpleMessage("zh"),
   };
 }

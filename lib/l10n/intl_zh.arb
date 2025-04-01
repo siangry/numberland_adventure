@@ -47,7 +47,13 @@
             }
         }
     },
-    "en":"EN",
-    "zh":"ZH",
-    "ms":"MS"
+    "en":"en",
+    "zh":"zh",
+    "ms":"ms",
+    "language": "语言",
+    "english": "英文",
+    "chinese": "华文",
+    "malay": "马来文",
+    "settings": "设定",
+    "music": "音乐"
 }

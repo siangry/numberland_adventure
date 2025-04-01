@@ -51,18 +51,21 @@ class _CompareNumberResultPageState extends State<CompareNumberResultPage> {
                   fit: BoxFit.cover,
                 ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              CustomTextBox(
-                  text:
-                      ('Score: $finalScore/15\n${resultId == 0 ? GameResultEnums.win.compareText : GameResultEnums.lose.compareText}'),
-                  onNext: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => MainPage()))),
-            ],
-          ),
+        child: SafeArea(
+          minimum: const EdgeInsets.all(16),
+          child: Stack(children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                CustomTextBox(
+                    text:
+                        ('Score: $finalScore/15\n${resultId == 0 ? GameResultEnums.win.compareText : GameResultEnums.lose.compareText}'),
+                    onNext: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => MainPage()))),
+              ],
+            ),
+            Positioned(top: 30, right: 16, child: FloatingButton())
+          ]),
         ),
       ),
     );

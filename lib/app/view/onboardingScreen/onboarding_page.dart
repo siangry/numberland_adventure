@@ -25,53 +25,43 @@ class _OnboardingPageState extends State<OnboardingPage> {
     }
   }
 
-  void changeLanguage(Locale locale) {
-    setState(() {
-      ///todo: implement language change
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView.builder(
-          controller: _controller,
-          itemCount: OnboardingEnums.values.length,
-          onPageChanged: (index) {
-            setState(() {
-              _currentPage = index;
-            });
-          },
-          itemBuilder: (context, index) {
-            final curPage = OnboardingEnums.values[index];
+      body: Stack(children: [
+        PageView.builder(
+            controller: _controller,
+            itemCount: OnboardingEnums.values.length,
+            onPageChanged: (index) {
+              setState(() {
+                _currentPage = index;
+              });
+            },
+            itemBuilder: (context, index) {
+              final curPage = OnboardingEnums.values[index];
 
-            return Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: Image.asset(curPage.imagePath).image,
-                  fit: BoxFit.cover,
+              return Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: Image.asset(curPage.imagePath).image,
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    //buildLanguageSelector(),
-                    CustomTextBox(text: curPage.title, onNext: navigateToNext),
-                  ],
+                child: SafeArea(
+                  minimum: const EdgeInsets.all(16),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const SizedBox(height: 70),
+                      CustomTextBox(
+                          text: curPage.title, onNext: navigateToNext),
+                    ],
+                  ),
                 ),
-              ),
-            );
-          }),
+              );
+            }),
+        Positioned(top: 30, right: 16, child: FloatingButton())
+      ]),
     );
   }
-
-// Widget buildLanguageSelector() {
-//   return Positioned(
-//     top: 40,
-//     right: 20,
-//     child: LanguageSelector(onLanguageChanged: changeLanguage),
-//   );
-// }
 }

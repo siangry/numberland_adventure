@@ -12,7 +12,6 @@ class CompareNumberGamePage extends StatefulWidget {
 
 class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
   final Random random = Random();
-  final AudioPlayer audioPlayer = AudioPlayer();
   int gameCount = 0;
   int score = 0;
   int num1 = 0, num2 = 0;
@@ -71,9 +70,6 @@ class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
 
     if (isCorrect) {
       score++;
-      playSound(Assets.audio.correctSoundEffect);
-    } else {
-      playSound(Assets.audio.wrongSoundEffect);
     }
 
     if (gameCount < 14) {
@@ -94,10 +90,6 @@ class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
     }
   }
 
-  void playSound(String fileName) async {
-    await audioPlayer.play(AssetSource(fileName));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -110,42 +102,45 @@ class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                questionText ?? '',
-                style: TextStyle(color: ColorConstant.black, fontSize: 30),
-                textAlign: TextAlign.center,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: buildNumberCard(num1),
+        child: SafeArea(
+          minimum: const EdgeInsets.all(16),
+          child: Stack(children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Text(
+                  questionText ?? '',
+                  style: TextStyle(color: ColorConstant.black, fontSize: 30),
+                  textAlign: TextAlign.center,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: buildNumberCard(num1),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: buildNumberCard(num2),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: buildNumberCard(num2),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              Visibility(
-                  visible: isTextVisible,
-                  child: Text(
-                    resultText,
-                    style: TextStyle(color: resultTextColor, fontSize: 24),
-                  ))
-            ],
-          ),
+                  ],
+                ),
+                Visibility(
+                    visible: isTextVisible,
+                    child: Text(
+                      resultText,
+                      style: TextStyle(color: resultTextColor, fontSize: 24),
+                    ))
+              ],
+            ),
+            Positioned(top: 30, right: 16, child: FloatingButton())
+          ]),
         ),
       ),
     );

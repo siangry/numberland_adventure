@@ -47,7 +47,13 @@
             }
         }
     },
-    "en":"EN",
-    "zh":"ZH",
-    "ms":"MS"
+    "en":"en",
+    "zh":"zh",
+    "ms":"ms",
+    "language": "Bahasa",
+    "english": "Inggeris",
+    "chinese": "Cina",
+    "malay": "Melayu",
+    "settings": "Pengaturan",
+    "music": "Lagu"
 }
