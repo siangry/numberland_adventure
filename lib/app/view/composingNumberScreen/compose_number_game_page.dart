@@ -217,7 +217,7 @@ class _ComposeNumberGamePageState extends State<ComposeNumberGamePage> {
 
   Widget buildNumberOption() {
     return Container(
-      height: MediaQuery.sizeOf(context).height * 0.1,
+      height: MediaQuery.sizeOf(context).height * 0.08,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: ColorConstant.white,
@@ -230,7 +230,10 @@ class _ComposeNumberGamePageState extends State<ComposeNumberGamePage> {
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Text(answer.toString(),
-                  style: TextStyle(color: ColorConstant.black, fontSize: 20)),
+                  style: TextStyle(
+                      color: ColorConstant.black,
+                      fontSize: 24,
+                      fontFamily: GeneralConstant.fontAcme)),
             ),
           );
         }).toList(),

@@ -2,11 +2,7 @@ import 'package:numberland_adventure/app/exporter/importer_app_general.dart';
 import 'package:numberland_adventure/app/exporter/importer_app_screen.dart';
 
 class MainPage extends StatefulWidget {
-  // final Function(Locale) setLocale;
-
-  const MainPage({super.key
-   // , required this.setLocale
-  });
+  const MainPage({super.key});
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -48,9 +44,11 @@ class _MainPageState extends State<MainPage> {
               ),
             )),
         Positioned(
-            top: 30, right: 16, child: FloatingButton(
-            //setLocale: setLocale
-    ))
+            top: 30,
+            right: 16,
+            child: FloatingButton(
+                //setLocale: setLocale
+                ))
       ]),
     );
   }
@@ -66,7 +64,10 @@ class _MainPageState extends State<MainPage> {
       child: Center(
         child: Text(
           title,
-          style: TextStyle(color: ColorConstant.black, fontSize: 20),
+          style: TextStyle(
+              color: ColorConstant.black,
+              fontSize: 22,
+              fontFamily: GeneralConstant.fontAcme),
         ),
       ),
     );

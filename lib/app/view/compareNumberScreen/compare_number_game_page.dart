@@ -159,8 +159,10 @@ class _CompareNumberGamePageState extends State<CompareNumberGamePage> {
                 borderRadius: BorderRadius.circular(20)),
             child: Center(
                 child: Text(num.toString(),
-                    style:
-                        TextStyle(color: ColorConstant.black, fontSize: 24)))),
+                    style: TextStyle(
+                        color: ColorConstant.black,
+                        fontSize: 30,
+                        fontFamily: GeneralConstant.fontAcme)))),
         onPressed: () => checkAnswer(num),
       ),
       if (isTextVisible)

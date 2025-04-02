@@ -1,6 +1,5 @@
 import 'package:numberland_adventure/app/exporter/importer_app_general.dart';
 
-
 class FloatingButton extends StatefulWidget {
   const FloatingButton({super.key});
 
@@ -25,7 +24,10 @@ class _FloatingButtonState extends State<FloatingButton> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(S.current.language),
+                  Text(
+                    S.current.language,
+                    style: TextStyle(color: ColorConstant.black, fontSize: 18),
+                  ),
                   DropdownButton<String>(
                     value: appState.locale.languageCode == S.current.en
                         ? S.current.english
@@ -38,9 +40,12 @@ class _FloatingButtonState extends State<FloatingButton> {
                       S.current.malay
                     ].map((String language) {
                       return DropdownMenuItem<String>(
-                        value: language,
-                        child: Text(language),
-                      );
+                          value: language,
+                          child: Text(
+                            language,
+                            style: TextStyle(
+                                color: ColorConstant.black, fontSize: 18),
+                          ));
                     }).toList(),
                     onChanged: (String? newValue) {
                       if (newValue != null) {
@@ -59,7 +64,9 @@ class _FloatingButtonState extends State<FloatingButton> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(S.current.music),
+                  Text(S.current.music,
+                      style:
+                          TextStyle(color: ColorConstant.black, fontSize: 18)),
                   ValueListenableBuilder<bool>(
                       valueListenable: _audioManager.isPlaying,
                       builder: (context, isPlaying, child) {

@@ -76,7 +76,10 @@ class _SelectLevelPageState extends State<SelectLevelPage> {
       child: Center(
         child: Text(
           title,
-          style: TextStyle(color: ColorConstant.black, fontSize: 20),
+          style: TextStyle(
+              color: ColorConstant.black,
+              fontSize: 22,
+              fontFamily: GeneralConstant.fontAcme),
         ),
       ),
     );
