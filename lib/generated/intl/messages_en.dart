@@ -61,6 +61,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "easy": MessageLookupByLibrary.simpleMessage("Easy"),
     "en": MessageLookupByLibrary.simpleMessage("en"),
     "english": MessageLookupByLibrary.simpleMessage("English"),
+    "fromLeftToRight": MessageLookupByLibrary.simpleMessage(
+      "**From left to right & top to bottom",
+    ),
     "hard": MessageLookupByLibrary.simpleMessage("Hard"),
     "language": MessageLookupByLibrary.simpleMessage("Language"),
     "malay": MessageLookupByLibrary.simpleMessage("Malay"),

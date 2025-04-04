@@ -290,6 +290,16 @@ class S {
     );
   }
 
+  /// `**From left to right & top to bottom`
+  String get fromLeftToRight {
+    return Intl.message(
+      '**From left to right & top to bottom',
+      name: 'fromLeftToRight',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Congratulation! You have successfully built the correct tower.`
   String get congratulationYouHavehelp {
     return Intl.message(

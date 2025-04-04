@@ -24,6 +24,7 @@
     "arrangetheNumberBlocks":"排列数字积木，建造正确的塔楼，恢复数字王国的天际线！",
     "arrangeNumbersInAscending":"按顺序（从小到大）排列数字",
     "arrangeNumbersInDescending":"按逆序（从大到小）排列数字",
+    "fromLeftToRight": "**从左到右 & 从上到下",
     "congratulationYouHavehelp":"恭喜你！你成功建造了正确的数字塔。",
     "oopsTheTowerIsNotBuilt":"哎呀！你没能建造正确的数字塔。",
     "theNumberWizardNeeds":"数字魔法师需要你帮忙制作魔法药水！",
