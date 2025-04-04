@@ -49,19 +49,8 @@ class _ComposeNumberGamePageState extends State<ComposeNumberGamePage> {
 
     num1 = random.nextInt(maxDigit - minDigit + 1) + minDigit;
     num2 = random.nextInt(maxDigit - minDigit + 1) + minDigit;
-    operator =
-        (random.nextBool()) ? GeneralConstant.plus : GeneralConstant.minus;
-
-    if (operator == GeneralConstant.minus) {
-      if (num1 < num2) {
-        int temp = num1;
-        num1 = num2;
-        num2 = temp;
-      }
-      correctAns = num1 - num2;
-    } else {
-      correctAns = num1 + num2;
-    }
+    operator = GeneralConstant.plus;
+    correctAns = num1 + num2;
 
     generateAnswerOptions();
   }
