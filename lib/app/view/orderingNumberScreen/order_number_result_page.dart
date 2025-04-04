@@ -58,7 +58,7 @@ class _OrderNumberResultPageState extends State<OrderNumberResultPage> {
               children: [
                 CustomTextBox(
                     text:
-                        ('Score: $finalScore/15\n${resultId == 0 ? GameResultEnums.win.orderText : GameResultEnums.lose.orderText}'),
+                        ('${S.current.score} $finalScore/15\n${resultId == 0 ? GameResultEnums.win.orderText : GameResultEnums.lose.orderText}'),
                     onNext: () => Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => MainPage()))),
               ],

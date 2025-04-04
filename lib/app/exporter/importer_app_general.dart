@@ -18,6 +18,6 @@ export 'package:numberland_adventure/app/assets/game_result_enums.dart';
 
 export 'package:numberland_adventure/app/widget/custom_text_box.dart';
 export 'package:numberland_adventure/app/widget/touch_opacity.dart';
-export 'package:numberland_adventure/app/widget/shared_preferences.dart';
+export 'package:numberland_adventure/app/widget/app_state.dart';
 export 'package:numberland_adventure/app/widget/floating_button.dart';
 export 'package:numberland_adventure/app/widget/audio_manager.dart';

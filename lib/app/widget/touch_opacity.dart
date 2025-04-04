@@ -15,8 +15,6 @@ class TouchableOpacity extends StatelessWidget {
   final EdgeInsets padding;
   final Alignment alignment;
 
-  /// The opacity that the button will fade to when it is pressed.
-  /// The button will have an opacity of 1.0 when it is not pressed.
   final double? pressedOpacity;
 
   @override

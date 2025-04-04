@@ -59,7 +59,7 @@ class _ComposeNumberResultPageState extends State<ComposeNumberResultPage> {
               children: [
                 CustomTextBox(
                     text:
-                        ('Score: $finalScore/15\n${resultId == 0 ? GameResultEnums.win.composeText : GameResultEnums.lose.composeText}'),
+                        ('${S.current.score}: $finalScore/15\n${resultId == 0 ? GameResultEnums.win.composeText : GameResultEnums.lose.composeText}'),
                     onNext: () => Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => MainPage()))),
               ],

@@ -10,7 +10,6 @@ class AudioManager {
   AudioManager._internal();
 
   void playMusic() async {
-    // FlameAudio.bgm.initialize();
     await FlameAudio.bgm.play('audio_bgm.mp3', volume: 0.5);
     isPlaying.value = true;
   }
