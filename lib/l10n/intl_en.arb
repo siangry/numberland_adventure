@@ -24,6 +24,7 @@
   "arrangetheNumberBlocks": "Arrange the number blocks to build the correct tower and restore Numberland's skyline!",
   "arrangeNumbersInAscending": "Arrange numbers in ascending order (small to big)",
   "arrangeNumbersInDescending": "Arrange numbers in descending order (big to small)",
+  "fromLeftToRight": "**From left to right & top to bottom",
   "congratulationYouHavehelp": "Congratulation! You have successfully built the correct tower.",
   "oopsTheTowerIsNotBuilt": "Oops! The tower is not built correctly.",
   "theNumberWizardNeeds": "The Number Wizard needs your help to make magic potions!",

@@ -115,10 +115,21 @@ class _OrderNumberGamePageState extends State<OrderNumberGamePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text(
-                  questionText,
-                  style: TextStyle(color: ColorConstant.black, fontSize: 30),
-                  textAlign: TextAlign.center,
+                Column(
+                  children: [
+                    Text(
+                      questionText,
+                      style:
+                          TextStyle(color: ColorConstant.black, fontSize: 30),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      S.current.fromLeftToRight,
+                      style:
+                          TextStyle(color: ColorConstant.black, fontSize: 20),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
                 ),
                 Wrap(
                   spacing: 10,
