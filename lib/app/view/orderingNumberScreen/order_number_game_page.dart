@@ -59,7 +59,12 @@ class _OrderNumberGamePageState extends State<OrderNumberGamePage> {
         : levelId == 1
             ? 99
             : 999;
-    return List.generate(count, (_) => Random().nextInt(maxNumber) + 1);
+
+    Set<int> numbers = {};
+    while (numbers.length < count) {
+      numbers.add(random.nextInt(maxNumber) + 1);
+    }
+    return numbers.toList();
   }
 
   void checkAnswer() async {
@@ -183,7 +188,7 @@ class _OrderNumberGamePageState extends State<OrderNumberGamePage> {
                 )
               ],
             ),
-            Positioned(top: 30, right: 16, child: FloatingButton())
+            Positioned(top: 10, right: 10, child: FloatingButton())
           ]),
         ),
       ),

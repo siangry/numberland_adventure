@@ -43,12 +43,7 @@ class _MainPageState extends State<MainPage> {
                 ],
               ),
             )),
-        Positioned(
-            top: 30,
-            right: 16,
-            child: FloatingButton(
-                //setLocale: setLocale
-                ))
+        Positioned(top: 30, right: 16, child: FloatingButton())
       ]),
     );
   }
