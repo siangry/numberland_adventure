@@ -390,6 +390,11 @@ class S {
     );
   }
 
+  /// `Score`
+  String get score {
+    return Intl.message('Score', name: 'score', desc: '', args: []);
+  }
+
   /// `en`
   String get en {
     return Intl.message('en', name: 'en', desc: '', args: []);

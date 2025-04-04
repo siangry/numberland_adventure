@@ -88,6 +88,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pickTheBiggerorSmaller": MessageLookupByLibrary.simpleMessage(
       "Pick the bigger number or smaller number, as the king requests, to make the bridge appear!",
     ),
+    "score": MessageLookupByLibrary.simpleMessage("Score"),
     "settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "theCorrectNumberIs": m0,
     "theMagicBridge": MessageLookupByLibrary.simpleMessage("The Magic Bridge"),

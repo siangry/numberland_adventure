@@ -76,6 +76,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pickTheBiggerorSmaller": MessageLookupByLibrary.simpleMessage(
       "按照国王的要求，选择较大的数字或较小的数字，让桥出现！",
     ),
+    "score": MessageLookupByLibrary.simpleMessage("分数"),
     "settings": MessageLookupByLibrary.simpleMessage("设定"),
     "theCorrectNumberIs": m0,
     "theMagicBridge": MessageLookupByLibrary.simpleMessage("魔法桥梁"),
