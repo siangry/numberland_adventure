@@ -1,16 +1,9 @@
-# numberland_adventure
+# Numberland Adventure
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+A interactive mobile application for school going children to enhance their mathematics skills.
+The features included in this mobile application:
+1. Storyline integration: To make the learning process fun and interactive.
+2. Games selection: To allow users to choose the game they preferred.
+3. Levels selection: To provide different game difficulties.
+4. Localization: To support multiple languages.
+5. Background music: To create an engaging experience.
