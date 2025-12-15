@@ -7,3 +7,5 @@ The features included in this mobile application:
 3. Levels selection: To provide different game difficulties.
 4. Localization: To support multiple languages.
 5. Background music: To create an engaging experience.
+
+- Tech: Flutter
